@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 // Configure CORS to allow requests from your Firebase Hosting URL
-const allowedOrigins = ['https://myweb-app.web.app']; // Replace with your Firebase Hosting URL
+const allowedOrigins = ['https://oassisjob.web.app']; // Replace with your Firebase Hosting URL
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
