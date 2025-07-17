@@ -91,7 +91,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 
 
-
+/*
 // Verify Payment Endpoint (Webhook)
 app.post('/verify-payment', async (req, res) => {
   const { tx_ref, status } = req.body;
@@ -163,4 +163,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
 });
-   
+
+*/
