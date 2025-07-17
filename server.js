@@ -11,8 +11,8 @@ app.post('/initialize-payment', async (req, res) => {
     const response = await fetch('https://api.chapa.co/v1/transaction/initialize', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer CHASECK_TEST-27sVSet7iCwGcr03beVXjenzWLsvz68Y', 
-          //CHAPA_TEST_KEY', // Replace with your Chapa test key
+        'Authorization': 'Bearer CHAPA_TEST_KEY', 
+        // Replace with your Chapa test key
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(req.body)
