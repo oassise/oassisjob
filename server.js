@@ -13,7 +13,7 @@ app.post('/initialize-payment', async (req, res) => {
   alert('The chapa api is: ${CHAPA_TEST_KEY}');
   try {
     const response = await fetch('https://api.chapa.co/v1/transaction/initialize', {
-      mode: 'no-cors',
+      //mode: 'no-cors',
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ${CHAPA_TEST_KEY}', 
