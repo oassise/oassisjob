@@ -1,19 +1,21 @@
 const express = require('express');
 const fetch = require('node-fetch');
-//const cors = require('cors');
+const cors = require('cors');
 
 const app = express();
-//app.use(cors({ origin: 'https://oassisjob.web.app' }));
+app.use(cors({ origin: 'https://oassisjob.web.app' }));
 app.use(express.json());
-const CHAPA_TEST_KEY = process.env.CHAPA_TEST_KEY;
+
 
 app.post('/initialize-payment', async (req, res) => {
+  const CHAPA_TEST_KEY = process.env.CHAPA_TEST_KEY;
+  console.log(CHAPA_TEST_KEY);
   try {
     const response = await fetch('https://api.chapa.co/v1/transaction/initialize', {
       mode: 'no-cors',
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer CHAPA_TEST_KEY', 
+        'Authorization': 'Bearer ${CHAPA_TEST_KEY}', 
         // Replace with your Chapa test key
         'Content-Type': 'application/json'
       },
