@@ -10,6 +10,7 @@ app.use(express.json());
 app.post('/initialize-payment', async (req, res) => {
   const CHAPA_TEST_KEY = process.env.CHAPA_TEST_KEY;
   console.log(CHAPA_TEST_KEY);
+  alert('The chapa api is: ${CHAPA_TEST_KEY}');
   try {
     const response = await fetch('https://api.chapa.co/v1/transaction/initialize', {
       mode: 'no-cors',
